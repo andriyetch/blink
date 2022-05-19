@@ -28,10 +28,12 @@ function doStuff(ev) {
     month: results.dateOfBirth.month || results.mrz.dateOfBirth.month,
     day: results.dateOfBirth.day || results.mrz.dateOfBirth.day
   }
+  console.log(results)
+  console.log(dateOfBirth)
 
-  alert(
-    `Hello, ${ firstName } ${ lastName }!\n You were born on ${ dateOfBirth.year }-${ dateOfBirth.month }-${ dateOfBirth.day }.`
-  );
+  // alert(
+  //   `Hello, ${ firstName } ${ lastName }!\n You were born on ${ dateOfBirth.year }-${ dateOfBirth.month }-${ dateOfBirth.day }.`
+  // );
 }
 
 blinkId.addEventListener('feedback', ev => {
