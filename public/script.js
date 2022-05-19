@@ -16,11 +16,8 @@ blinkId.addEventListener('scanError', ev => {
 
 blinkId.addEventListener('scanSuccess', ev => {
   console.log('scanSuccess', ev.detail);
-  doStuff(ev)
-});
 
-function doStuff(ev) {
-  const results = ev.detail.recognizer;
+    const results = ev.detail.recognizer;
   const firstName = results.firstName || results.mrz.secondaryID;
   const lastName = results.lastName || results.mrz.primaryID;
   const dateOfBirth = {
@@ -30,6 +27,12 @@ function doStuff(ev) {
   }
   console.log(results)
   console.log(dateOfBirth)
+
+  doStuff(ev)
+});
+
+function doStuff(ev) {
+
 
   // alert(
   //   `Hello, ${ firstName } ${ lastName }!\n You were born on ${ dateOfBirth.year }-${ dateOfBirth.month }-${ dateOfBirth.day }.`
