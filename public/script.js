@@ -1,5 +1,6 @@
 import 'https://unpkg.com/@microblink/blinkid-in-browser-sdk@5.16.0/ui/dist/blinkid-in-browser/blinkid-in-browser.esm.js';
 
+//https://www.ferraridrivingschool.com/id-received/
 const blinkId = document.querySelector('blinkid-in-browser');
 
 blinkId.addEventListener('fatalError', ev => {
